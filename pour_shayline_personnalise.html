@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#ffe7ef">
+<title>Pour Shayline ♡</title>
+<style>
+:root{--pink:#f6a9c4;--deep:#9c315b;--pale:#fff5f8;--ink:#54263a;--white:#fff}
+*{box-sizing:border-box} html{scroll-behavior:smooth}
+body{margin:0;background:linear-gradient(160deg,#fff8fb,#ffe7ef 55%,#fff5f8);color:var(--ink);font-family:Georgia,'Times New Roman',serif}
+button,input{font:inherit} button{cursor:pointer;border:0;border-radius:999px;padding:12px 18px;background:var(--deep);color:white;box-shadow:0 5px 15px #9c315b22;transition:.2s}button:hover{transform:translateY(-2px)}
+header{min-height:90vh;display:grid;place-items:center;text-align:center;padding:36px 18px;position:relative;overflow:hidden}
+.hero{max-width:760px;position:relative;z-index:1}.eyebrow{letter-spacing:.18em;text-transform:uppercase;font:12px Arial,sans-serif;color:#a54a70}
+h1{font-size:clamp(3rem,11vw,6.5rem);line-height:.95;margin:18px 0;color:var(--deep);font-weight:normal}
+h2{font-size:clamp(2rem,6vw,3rem);font-weight:normal;color:var(--deep);margin:0 0 12px}
+p{line-height:1.7}.lead{font-size:1.15rem;max-width:560px;margin:18px auto 26px}
+.heart{position:absolute;color:#e88bac;opacity:.35;animation:float 7s ease-in-out infinite;font-size:clamp(20px,4vw,45px)}.h1{top:12%;left:9%}.h2{right:9%;top:22%;animation-delay:1s}.h3{bottom:14%;left:16%;animation-delay:2s}
+@keyframes float{50%{transform:translateY(-18px) rotate(8deg)}}
+section{padding:70px 18px;max-width:1050px;margin:auto}.center{text-align:center}.sub{max-width:650px;margin:0 auto 28px}
+.panel{background:#ffffffc9;border:1px solid #f6c7d7;border-radius:24px;padding:24px;box-shadow:0 15px 45px #9c315b0d}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.photo{min-height:240px;border-radius:18px;background:linear-gradient(145deg,#fbd2e0,#fff2f6);display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden;position:relative;border:1px dashed #d98ba8}
+.photo img{width:100%;height:100%;position:absolute;inset:0;object-fit:cover}.photo span{padding:20px;z-index:0}.photo small{display:block;margin-top:8px}
+.caption{padding:10px 4px 0;text-align:center}
+label{display:inline-block;font:14px Arial,sans-serif;margin:8px 0;color:#8a3c5b}
+input[type=text],input[type=date],input[type=file]{max-width:100%;padding:11px;border:1px solid #e8b1c5;border-radius:12px;background:white;color:var(--ink)}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center;justify-content:center}
+.letters button{width:100%;margin:6px 0;background:#fff;color:var(--deep);border:1px solid #f0bbce;text-align:left;border-radius:14px}
+.letter-body{display:none;padding:12px 14px;background:#fff6f9;border-radius:12px;margin:4px 0 12px;line-height:1.7}
+.letter-body.open{display:block}
+.quiz-q{font-size:1.15rem;margin:12px 0}.answers{display:grid;gap:8px}.answers button{background:#fff;color:var(--deep);border:1px solid #f0bbce;text-align:left;box-shadow:none}
+#quizResult,#finalMessage{margin-top:18px;font-size:1.1rem}
+.counter{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin:22px 0}.unit{background:white;border:1px solid #f5c5d6;border-radius:16px;padding:15px;min-width:85px}.unit strong{display:block;font-size:1.7rem;color:var(--deep)}
+footer{text-align:center;padding:40px 20px;color:#9d5671}
+.note{font:13px Arial,sans-serif;color:#8b6272}.tiny{font:12px Arial,sans-serif}
+a{color:var(--deep)}
+@media(max-width:550px){section{padding:52px 15px}.panel{padding:18px}.photo{min-height:210px}}
+</style>
+</head>
+<body>
+<header>
+  <span class="heart h1">♡</span><span class="heart h2">✿</span><span class="heart h3">♡</span>
+  <div class="hero">
+    <div class="eyebrow">Une petite surprise rien que pour toi</div>
+    <h1>Joyeux anniversaire<br>Shayline ♡</h1>
+    <p class="lead">Pour mon cœur, mon amour, ma chérie, la miss, ma princesse… et ma p'tite tête. J'ai préparé ce petit coin d'Internet juste pour toi. Chaque clic cache un peu d'amour.</p>
+    <button onclick="document.querySelector('#souvenirs').scrollIntoView({behavior:'smooth'})">Ouvre ta surprise ♡</button>
+    <p class="tiny">Fait avec amour, spécialement pour toi.</p>
+  </div>
+</header>
+
+<section id="souvenirs">
+  <div class="center"><div class="eyebrow">Nos petits instants</div><h2>Notre galerie de souvenirs</h2><p class="sub">Ajoute vos photos depuis ton appareil. Elles s'affichent dans cette page sur ton navigateur. Pour les montrer à Shayline sur le site public, il faudra aussi ajouter les fichiers photo au site avant de le publier.</p></div>
+  <div class="panel">
+    <label for="photoUpload">Choisir des photos à prévisualiser</label><br>
+    <input id="photoUpload" type="file" accept="image/*" multiple>
+    <div class="grid" id="gallery" style="margin-top:18px">
+      <div><div class="photo"><span>📷<br>Votre première photo<small>Remplace-moi avec une photo</small></span></div><div class="caption">Un souvenir précieux ♡</div></div>
+      <div><div class="photo"><span>🌸<br>Un moment heureux<small>Remplace-moi avec une photo</small></span></div><div class="caption">Un sourire que j'adore</div></div>
+      <div><div class="photo"><span>💗<br>Juste nous deux<small>Remplace-moi avec une photo</small></span></div><div class="caption">Mon endroit préféré, c'est avec toi</div></div>
+    </div>
+    <p class="note">Astuce : les photos choisies ici sont une prévisualisation locale. Pour une galerie publique permanente, il faudra intégrer les photos au dossier du site. Évite de publier des photos que Shayline ne souhaiterait pas rendre accessibles.</p>
+  </div>
+</section>
+
+<section>
+ <div class="center"><div class="eyebrow">Quelques mots pour toi</div><h2>Des lettres à ouvrir</h2><p class="sub">Choisis une enveloppe. Il y a un petit mot derrière chacune.</p></div>
+ <div class="panel letters">
+  <button onclick="toggleLetter(0)">💌 Ouvre quand tu as besoin de sourire</button><div class="letter-body" id="letter0">Coucou ma princesse. J'espère que ce petit message te rappelle à quel point tu comptes pour moi. Ton sourire rend les journées plus belles, même les plus ordinaires. ♡</div>
+  <button onclick="toggleLetter(1)">🌷 Ouvre quand tu veux un câlin à distance</button><div class="letter-body" id="letter1">Imagine le plus grand câlin du monde, avec un bisou sur le front et un « tout va bien, mon cœur ». Je t'envoie toute ma tendresse, même à travers un écran.</div>
+  <button onclick="toggleLetter(2)">✨ Ouvre pour une promesse</button><div class="letter-body" id="letter2">Je veux continuer à créer des souvenirs avec toi, rire pour des bêtises, t'écouter et célébrer toutes les petites choses qui font que notre histoire est la nôtre.</div>
+  <p class="note">Tu peux modifier ces textes directement dans le fichier du site plus tard.</p>
+ </div>
+</section>
+
+<section>
+ <div class="center"><div class="eyebrow">La bande-son</div><h2>Une chanson pour nous</h2><p class="sub">Choisis un fichier audio que tu as le droit de partager. Le navigateur peut demander un clic avant de lancer la musique.</p></div>
+ <div class="panel center">
+  <input id="musicFile" type="file" accept="audio/*"><p><button id="musicToggle">▶ Écouter la musique choisie</button></p>
+  <audio id="audio" controls loop style="width:min(100%,420px);display:none"></audio>
+  <p class="note">La musique choisie depuis ton appareil n'est pas ajoutée automatiquement au site public. Pour le site en ligne, il faudra inclure le fichier audio et respecter les droits d'utilisation.</p>
+ </div>
+</section>
+
+<section>
+ <div class="center"><div class="eyebrow">Petit test tout mignon</div><h2>Notre mini quiz amoureux</h2><p class="sub">Voyons si tu connais les réponses… même si le vrai but, c'est de sourire ensemble.</p></div>
+ <div class="panel" id="quiz">
+  <div class="quiz-q" id="question">1. Quel surnom est dans la liste rien que pour toi ?</div><div class="answers" id="answers"></div><p id="quizResult" aria-live="polite"></p><div class="row"><button id="nextQuestion" style="display:none">Question suivante →</button></div>
+ </div>
+</section>
+
+<section>
+ <div class="center"><div class="eyebrow">Le grand jour approche</div><h2>Compte à rebours pour ton anniversaire</h2><p class="sub">Le 4 novembre 2026, une journée spéciale pour une personne encore plus spéciale ♡</p></div>
+ <div class="panel center"><div class="counter"><div class="unit"><strong id="bDays">—</strong><span>jours</span></div><div class="unit"><strong id="bHours">—</strong><span>heures</span></div><div class="unit"><strong id="bMinutes">—</strong><span>minutes</span></div><div class="unit"><strong id="bSeconds">—</strong><span>secondes</span></div></div><p id="birthdayText">Chaque jour nous rapproche de ta journée.</p></div>
+</section>
+
+<section>
+ <div class="center"><div class="eyebrow">Un petit film rien qu'à toi</div><h2>Notre vidéo souvenir</h2><p class="sub">Choisis une vidéo depuis ton appareil pour la prévisualiser ici. Pour qu'elle soit visible en ligne, ajoute le fichier vidéo au site avant de le publier.</p></div>
+ <div class="panel center">
+  <input id="videoFile" type="file" accept="video/*">
+  <video id="videoPreview" controls playsinline style="display:none;width:min(100%,700px);max-height:440px;margin:18px auto 0;border-radius:18px;background:#2d1520"></video>
+  <p class="note">Utilise une vidéo que tu as le droit de partager et assure-toi que Shayline est d'accord pour qu'elle soit publiée.</p>
+ </div>
+</section>
+
+<section>
+ <div class="center"><div class="eyebrow">Le temps et les souvenirs</div><h2>Depuis le début de nous</h2><p class="sub">Si tu veux afficher le temps depuis votre rencontre, choisis la date ci-dessous.</p></div>
+ <div class="panel center">
+  <label for="meetDate">Notre date de rencontre</label><br><input type="date" id="meetDate" value="2025-09-05">
+  <div class="counter"><div class="unit"><strong id="days">—</strong><span>jours</span></div><div class="unit"><strong id="hours">—</strong><span>heures</span></div><div class="unit"><strong id="minutes">—</strong><span>minutes</span></div></div>
+  <p class="note">Le compteur se met à jour quand tu choisis une date. La date ne sera pas enregistrée sur un serveur.</p>
+ </div>
+</section>
+
+<section>
+ <div class="center"><div class="eyebrow">Et pour finir…</div><h2>Une dernière surprise</h2><p class="sub">Garde le meilleur pour la fin, ma chérie.</p></div>
+ <div class="panel center">
+  <button id="reveal">🎁 Déballer ma surprise</button>
+  <div id="finalMessage" hidden>Shayline, mon cœur, mon amour, ma chérie, ma princesse et ma p'tite tête… ♡<br><br>Joyeux anniversaire ! Merci d'être toi, de rendre mes journées plus belles et de faire partie de mes souvenirs préférés. J'espère que cette nouvelle année t'apportera plein de joie, de douceur et de rêves qui se réalisent. Je t'envoie tout mon amour. 💗<br><br><span style="font-size:1.8rem">♡ ♡ ♡</span></div>
+ </div>
+</section>
+<footer>Créé avec tout mon cœur pour Shayline ♡<br><span class="tiny">Un petit site, beaucoup d'amour.</span></footer>
+
+<script>
+function toggleLetter(n){document.getElementById('letter'+n).classList.toggle('open')}
+const photoUpload=document.getElementById('photoUpload');
+photoUpload.addEventListener('change',e=>{
+ const files=[...e.target.files]; if(!files.length)return;
+ const gallery=document.getElementById('gallery'); gallery.innerHTML='';
+ files.forEach((file,i)=>{const wrap=document.createElement('div'), frame=document.createElement('div'), img=document.createElement('img'), cap=document.createElement('div');
+ frame.className='photo'; img.src=URL.createObjectURL(file); img.alt='Souvenir '+(i+1); frame.appendChild(img); cap.className='caption'; cap.textContent=['Un souvenir précieux ♡','Un sourire que j’adore','Mon endroit préféré, c’est avec toi'][i%3]; wrap.append(frame,cap); gallery.appendChild(wrap);});
+});
+const musicFile=document.getElementById('musicFile'),audio=document.getElementById('audio');
+musicFile.addEventListener('change',e=>{if(e.target.files[0]){audio.src=URL.createObjectURL(e.target.files[0]);audio.style.display='inline-block';}});
+document.getElementById('musicToggle').addEventListener('click',async()=>{if(!audio.src){alert('Choisis d’abord un fichier audio.');return;}if(audio.paused){try{await audio.play()}catch(e){alert('Appuie sur lecture dans le lecteur audio.')}}else audio.pause();});
+const questions=[
+ {q:'1. Quel surnom est dans la liste rien que pour toi ?',a:['Ma princesse','Madame la Présidente','Capitaine'],correct:0,why:'Bien sûr : ma princesse ♡'},
+ {q:'2. Qu’est-ce que j’aime garder avec toi ?',a:['Des souvenirs','Les tickets de caisse','Les chaussettes dépareillées'],correct:0,why:'Nos souvenirs sont précieux !'},
+ {q:'3. Quel est le but de ce site ?',a:['Te faire sourire','Faire mes devoirs','Parler de météo'],correct:0,why:'Exactement : te faire sourire, mon cœur 💗'}
+];let qi=0,score=0,answered=false;
+function renderQ(){answered=false;const q=questions[qi];document.getElementById('question').textContent=q.q;document.getElementById('quizResult').textContent='';const a=document.getElementById('answers');a.innerHTML='';q.a.forEach((t,i)=>{const b=document.createElement('button');b.textContent=t;b.onclick=()=>{if(answered)return;answered=true;if(i===q.correct)score++;document.getElementById('quizResult').textContent=q.why;[...a.children].forEach(x=>x.disabled=true);document.getElementById('nextQuestion').style.display='inline-block';document.getElementById('nextQuestion').textContent=qi===questions.length-1?'Voir le résultat ♡':'Question suivante →';};a.appendChild(b)});document.getElementById('nextQuestion').style.display='none'}
+document.getElementById('nextQuestion').addEventListener('click',()=>{if(qi<questions.length-1){qi++;renderQ()}else{document.getElementById('question').textContent='Résultat : '+score+'/'+questions.length+' 💗';document.getElementById('answers').innerHTML='';document.getElementById('quizResult').textContent='La meilleure réponse, c’est qu’on continue à créer nos souvenirs ensemble.';document.getElementById('nextQuestion').style.display='none';}});
+renderQ();
+const meetDate=document.getElementById('meetDate');
+meetDate.addEventListener('change',updateCounter);
+function updateCounter(){if(!meetDate.value){['days','hours','minutes'].forEach(id=>document.getElementById(id).textContent='—');return;}const start=new Date(meetDate.value+'T00:00:00');let diff=Date.now()-start.getTime();if(diff<0){document.getElementById('days').textContent='0';document.getElementById('hours').textContent='0';document.getElementById('minutes').textContent='0';return;}document.getElementById('days').textContent=Math.floor(diff/86400000);document.getElementById('hours').textContent=Math.floor(diff/3600000)%24;document.getElementById('minutes').textContent=Math.floor(diff/60000)%60;}
+setInterval(updateCounter,60000);
+
+const videoFile=document.getElementById('videoFile'),videoPreview=document.getElementById('videoPreview');
+videoFile.addEventListener('change',e=>{if(e.target.files[0]){videoPreview.src=URL.createObjectURL(e.target.files[0]);videoPreview.style.display='block';}});
+const birthdayTarget=new Date('2026-11-04T00:00:00');
+function updateBirthdayCountdown(){
+ let diff=birthdayTarget.getTime()-Date.now();
+ if(diff<=0){['bDays','bHours','bMinutes','bSeconds'].forEach(id=>document.getElementById(id).textContent='0');document.getElementById('birthdayText').textContent='Joyeux anniversaire, Shayline ! ♡';return;}
+ document.getElementById('bDays').textContent=Math.floor(diff/86400000);
+ document.getElementById('bHours').textContent=Math.floor(diff/3600000)%24;
+ document.getElementById('bMinutes').textContent=Math.floor(diff/60000)%60;
+ document.getElementById('bSeconds').textContent=Math.floor(diff/1000)%60;
+}
+updateBirthdayCountdown();setInterval(updateBirthdayCountdown,1000);
+
+document.getElementById('reveal').addEventListener('click',()=>{document.getElementById('finalMessage').hidden=false;document.getElementById('reveal').textContent='Surprise ouverte ♡';document.getElementById('finalMessage').scrollIntoView({behavior:'smooth',block:'center'});});
+</script>
+</body>
+</html>
